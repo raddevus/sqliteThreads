@@ -3,9 +3,9 @@ using sqliteThreads.Model;
 
 Console.WriteLine("Hello, World!");
 
-Car c = new Car{Make="Ford", Model="Fairlane", Year=1968};
+Car c = new Car{ThreadId="Main", Make="Ford", Model="Fairlane", Year=1968};
 
-Console.WriteLine($"{c.Make} : {c.Model} : {c.Year}");
+Console.WriteLine($"{c.ThreadId} : {c.Make} : {c.Model} : {c.Year}");
 
 var db = new CarContext();
 

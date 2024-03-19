@@ -35,6 +35,7 @@ public class CarContext : DbContext
     protected String [] allTableCreation = {
         @"CREATE TABLE vehicle
             ( [ID] INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+            [ThreadId] NVARCHAR(30) NOT NULL check(length(ThreadId) <= 30),
             [Make] NVARCHAR(350)  NOT NULL check(length(Make) <= 350),
             [Model] NVARCHAR(350)  NOT NULL check(length(Model) <= 350),
             [Year] INTEGER NOT NULL default 0
